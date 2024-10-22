@@ -12,6 +12,7 @@ class TFIDF():
 
     def search(self, q, k):
         # Search documents using TF-IDF
+
         results = []
         finals = []
 
@@ -31,10 +32,7 @@ class TFIDF():
                 "text" : self.docs[item[1]]
             }
             results.append(temp)
-
         return results
 
 
-if __name__ == '__main__':
-    tf_idf = TFIDF()
-    print(tf_idf.search("Miền Bắc Việt Nam", 1))
+

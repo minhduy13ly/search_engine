@@ -19,15 +19,16 @@ def handle_query():
     # Example response based on the query
     clean_query = process_query(query)
 
+
     # Search using TF-IDF
-    filtered_results = tf_idf.search(clean_query, 10)
+    filtered_results = tf_idf.search(clean_query, 5)
 
     # Re-rank using AI 
     re_ranker = ReRanker()
 
-    scores = re_ranker.rank(query, filtered_results)
+    doc_id, score, text = re_ranker.rank(query, filtered_results)
 
-    return jsonify({'response': scores})
+    return jsonify({'doc_id': int(doc_id), 'score':float(score), 'text': text})
 
 def process_query(query):
     return query
