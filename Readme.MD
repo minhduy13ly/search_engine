@@ -7,10 +7,10 @@ pip install -r requirements.txt
 ### Run server
 
 ```
-python serve.py
+bash run_service.sh
 ```
 
-### Test API
+### Test API (if necessary) 
 
 ```
 curl -X POST http://127.0.0.1:5000/api/search -H "Content-Type: application/json" -d '{"query": "Việt Nam vững mạnh"}'
@@ -18,14 +18,7 @@ curl -X POST http://127.0.0.1:5000/api/search -H "Content-Type: application/json
 ```
 
 ### Demo
-#### Search `tỷ lệ vàng`
+#### Search the keyword in the interface
 
-![Test](demo/demo_1.png)
+![Test](demo/demo.png)
 
-#### Search `viện bảo tàng`
-
-![Test](demo/demo_2.png)
-
-#### Search `tỉ phú`
-
-![Test](demo/demo_3.png)
